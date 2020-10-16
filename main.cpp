@@ -3,7 +3,7 @@
 
 int main (){
 
-    Computadora c01 = Computadora("windows", "Huawei", "Rizen", 8);
+    Computadora c01 = Computadora("windows", "Huawei", "Rizen", 4);
     
     Computadora c02;
     c02.setSistema ("Windows");
@@ -17,6 +17,9 @@ int main (){
     lb.agregarComputadora(c02);
     
     lb.mostrar();
+
+    //cout << c01;
+    
     /*cout << c02.getSistema() << endl;
     cout << c02.getMarca() << endl;
     cout << c02.getProcesador() << endl;
