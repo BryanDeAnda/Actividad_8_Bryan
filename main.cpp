@@ -15,13 +15,14 @@ int main (){
 
     Laboratorio lb;
 
-    lb.agregarComputadora(c01);
-    lb.agregarComputadora(c02);
+    //lb.agregarComputadora(c01);
+    //lb.agregarComputadora(c02);
+    lb <<c01<<c02;
     
     
     Computadora c03;
     cin >> c03;
-    lb.agregarComputadora(c03);
+    lb << c03;
     
     lb.mostrar();
 
