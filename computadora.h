@@ -1,6 +1,7 @@
 #ifndef COMPUTADORA_H
 #define COMPUTADORA_H
 
+#include <iomanip>
 #include <iostream>
 using namespace std;
 
@@ -23,15 +24,38 @@ public:
     void setRam(int v);
     int getRam();
 
-    friend ostream& operator<< (ostream &out, const Computadora &p)
+    friend ostream& operator<<(ostream &out, const Computadora &p)
     {
-        out << p.sistema <<endl;
-        out << p.marca <<endl;
-        out << p.procesador <<endl;
-        out << p.ram << endl;
-        
+        out << left;
+        out << setw(10) << p.sistema;
+        out << setw(10) << p.marca;
+        out << setw(12) << p.procesador;
+        out << setw(6) << p.ram;
+        out <<endl;
+
         return out;
     } 
+    friend istream& operator>>(istream &in, Computadora &p)
+    {
+        // string temp;
+        // float fuerza;
+        // int salud;
+
+        cout << "Sistema operativo: ";
+        getline(cin, p.sistema);
+
+        cout << "Marca: ";
+        getline(cin, p.marca);
+
+        cout << "Procesador: ";
+        getline(cin, p.procesador);
+
+        cout << "Memoria RAM: ";
+        cin >> p.ram;
+
+
+        return in;
+    }
 };
 
 #endif

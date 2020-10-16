@@ -1,6 +1,8 @@
 #include <iostream>
 #include "laboratorio.h"
 
+using namespace std;
+
 int main (){
 
     Computadora c01 = Computadora("windows", "Huawei", "Rizen", 4);
@@ -16,10 +18,15 @@ int main (){
     lb.agregarComputadora(c01);
     lb.agregarComputadora(c02);
     
+    
+    Computadora c03;
+    cin >> c03;
+    lb.agregarComputadora(c03);
+    
     lb.mostrar();
 
     //cout << c01;
-    
+
     /*cout << c02.getSistema() << endl;
     cout << c02.getMarca() << endl;
     cout << c02.getProcesador() << endl;
