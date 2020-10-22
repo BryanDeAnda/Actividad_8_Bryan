@@ -23,8 +23,14 @@ int main (){
     Computadora c03;
     cin >> c03;
     lb << c03;
+
+    lb.recuperar();
     
     lb.mostrar();
+    lb.respaldar_capturas();
+
+    //lb.respaldar_tabla();
+    //lb.respaldar();
 
     //cout << c01;
 
